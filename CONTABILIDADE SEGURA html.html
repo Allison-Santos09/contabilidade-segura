@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Contabilidade Segura</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6fa;
+      color: #2c3e50;
+    }
+
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 20px;
+    }
+
+    .tabs a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      background-color: #0055a5;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .sub-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .sub-header h2 {
+      margin: 0;
+    }
+
+    .table-container {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .table-box {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+
+    .saldo-total {
+      font-weight: bold;
+      text-align: right;
+      margin-top: 10px;
+      color: #003366;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 16px;
+      background-color: #0055a5;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .extrato {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .chart {
+      background-color: #dbefff;
+      height: 150px;
+      margin: 10px 0;
+      border-radius: 4px;
+      position: relative;
+    }
+
+    .chart::after {
+      content: '';
+      position: absolute;
+      left: 10%;
+      top: 40%;
+      width: 80%;
+      height: 2px;
+      background-color: #0077cc;
+    }
+
+    .data-range {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .data-range input {
+      padding: 4px;
+    }
+
+    .title-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .empresa-box {
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">CONTABILIDADE SEGURA</div>
+    <div class="tabs">
+      <a href="#">EMPRESA</a>
+      <a href="#">ANÁLISES E RELATÓRIOS</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="title-bar">
+      <h2>Banco - Poupança</h2>
+      <div class="empresa-box">Empresa Demonstração</div>
+    </div>
+
+    <div class="data-range">
+      <label for="inicio">De:</label>
+      <input type="date" id="inicio">
+      <label for="fim">a</label>
+      <input type="date" id="fim">
+    </div>
+
+    <div class="chart"></div>
+
+    <div class="table-container">
+      <div class="table-box">
+        <h3>Contas</h3>
+        <table>
+          <tr><td>Banco - Poupança</td><td>R$ 48.105,38</td></tr>
+          <tr><td>Caixa</td><td>R$ 4.015,38</td></tr>
+          <tr><td>eFIN - Taxa de câmbio</td><td>R$ 1.015,38</td></tr>
+          <tr><td>QEF</td><td>R$ 396,00</td></tr>
+        </table>
+        <div class="saldo-total">Saldo: R$ 147.634,40</div>
+        <br>
+        <button>+ Nova conta</button>
+      </div>
+
+      <div class="table-box">
+        <h3>Extrato</h3>
+        <table>
+          <tr><th>Data</th><th>Nome</th><th>Descrição</th><th>Entrada</th><th>Saída</th><th>Saldo</th></tr>
+          <tr><td>14/03</td><td>-</td><td>Saldo anterior</td><td>-</td><td>-</td><td>R$ 57.208,32</td></tr>
+        </table>
+        <div class="btn-group">
+          <button>+ Novo pagamento</button>
+          <button>+ Novo recebimento</button>
+          <button>+ Nova transferência</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
